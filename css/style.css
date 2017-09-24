@@ -33,7 +33,7 @@ h4{
 
 body{
     margin: 0;
-    background-image: url(layout.jpg);
+    background-image: url(../img/layout.jpg);
     background-size: cover;
     font-size: 14px;
     background-color: #ffffff;
