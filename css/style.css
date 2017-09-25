@@ -1,0 +1,236 @@
+.search-box-wrapper{
+    display: inline;
+    text-align: center;
+}
+
+.search-box-input{
+    font-size: inherit;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 35%;
+}
+
+.search-box-button{
+    font-size: inherit;
+    border-radius: 5px;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+#homenavbar{
+    background-color: white;
+    box-shadow: 0px 6px 15px black;
+}
+h4{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.homebody {
+    margin: 0;
+}
+
+body{
+	margin: 0;
+}
+
+body.home{
+    background-image: url(../img/layout.jpg);
+    background-size: cover;
+    font-size: 14px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+}
+
+.home {
+    margin: 0 7px 10px 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.home ul {
+    margin: 0 0px 10px 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.home li {
+    float: right;
+    margin
+}
+
+.home a {
+    display: block;
+    color: rgb(0, 115, 38);
+    background-color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.home li a:hover {
+    background-color: rgba(0, 115, 38, 0.8);
+    color: white;
+    text-decoration: none;     
+}
+.active{
+    border-bottom: solid
+}
+.active h4{
+    font-weight: 700;
+}
+
+.isi h1{
+    text-align: center;
+    position: relative;
+    line-height: 1.3em;
+    margin-top: 180px;
+    padding: 0 15px 0px;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.8);
+    color: white;
+    font-weight: 700;
+    font-size: 40pt;
+    margin-bottom: 20px;
+}
+
+.kata h2{
+    text-align: center;
+    position: relative;
+    line-height: 1.3em;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.8);
+    color: white;
+    font-weight: 300;
+    font-size: 32px;
+
+}
+
+.global {
+    margin: 0 7px 10px 0;
+    background-color: rgb(0, 115, 38);
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.global li {
+    float: right;
+}
+
+.global li a {
+    display: block;
+    color: white;
+    background-color: rgb(0, 115, 38);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.global ul {
+    margin: 0 0px 10px 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 115, 38);
+}
+
+.global li a:hover {
+    background-color: white;
+    color: rgba(0, 115, 38, 0.8);
+    text-decoration: none;     
+}
+
+#globalnavbar{
+    background-color: rgb(0, 115, 38);
+    box-shadow: 0px 6px 15px black;
+    margin: 0;
+}
+
+#mainevent {
+    margin-top: 20px;
+    border-style : none;
+    overflow: auto;
+    float : left;
+    padding-top : 10px;
+    padding-left : 18px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.maingalleryevent {
+    margin-top: 0px;
+    float : left;
+    width: 40%;
+    height: 40%;
+    size : relative;
+}
+
+.maintextevent {
+    margin-top: 0px;
+    width: 59%;
+    height: 59%;
+    float: right;
+    font-size: auto;
+    text-align: justify;
+}
+
+.headmore {
+    margin-top: 20px;
+    margin-left : 15px;
+    margin-bottom : 15px;
+
+}
+
+.moregallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    display: inline-block;
+}
+
+.moregallery img {
+    width: 100%;
+    height: auto;
+}
+
+.moredesc {
+    padding: 15px;
+    text-align: center;
+
+}
+
+.img-circular{
+ width: 200px;
+ height: 200px;
+ background-image: url('http://s2.blomedia.pl/gadzetomania.pl/images/2012/08/ceny-logo-2-304166.jpg');
+ background-size: cover;
+ display: inline-block;
+ background-position: center;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}
+
+img.rounded{ 
+    border-radius: 50%; 
+}
+
+.socmed img{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 35px;
+    width: 35px;
+    transition-duration: 0.3s;
+}
+
+.socmed img:hover{
+    transform: scale(1.3, 1.3);
+}
