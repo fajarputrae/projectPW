@@ -21,7 +21,8 @@
 html{
     font-family: 'Roboto', sans-serif;
 }
-#navbar{
+
+#homenavbar{
     background-color: white;
     box-shadow: 0px 6px 15px black;
     margin: 0;
@@ -31,14 +32,15 @@ h4{
     font-size: 18px;
 }
 
-body{
+.homebody {
     margin: 0;
     background-image: url(../img/layout.jpg);
     background-size: cover;
     font-size: 14px;
     background-color: #ffffff;
+    background-repeat: no-repeat;
 }
-ul {
+.home {
     margin: 0 7px 10px 0;
     list-style-type: none;
     padding: 0;
@@ -47,11 +49,11 @@ ul {
 }
 
 
-li {
+.home li {
     float: right;
 }
 
-li a {
+.home a {
     display: block;
     color: rgb(0, 115, 38);
     background-color: white;
@@ -61,7 +63,7 @@ li a {
     transition: background-color 0.4s ease;
 }
 
-li a:hover {
+.home li a:hover {
     background-color: rgba(0, 115, 38, 0.8);
     color: white;
     text-decoration: none;     
@@ -97,3 +99,90 @@ li a:hover {
 
 }
 
+.global {
+    margin: 0 7px 10px 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 115, 38);
+}
+
+.global li {
+    float: right;
+}
+
+.global li a {
+    display: block;
+    color: white;
+    background-color: rgb(0, 115, 38);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.global li a:hover {
+    background-color: white;
+    color: rgba(0, 115, 38, 0.8);
+    text-decoration: none;     
+}
+
+#globalnavbar{
+    background-color: rgb(0, 115, 38);
+    box-shadow: 0px 6px 15px black;
+    margin: 0;
+}
+
+#mainevent {
+    margin-top: 20px;
+    border-style : none;
+    overflow: auto;
+    float : left;
+    padding-top : 10px;
+    padding-left : 18px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.maingalleryevent {
+    margin-top: 0px;
+    float : left;
+    width: 40%;
+    height: 40%;
+    size : relative;
+}
+
+.maintextevent {
+    margin-top: 0px;
+    width: 59%;
+    height: 59%;
+    float: right;
+    font-size: auto;
+    text-align: justify;
+}
+
+.headmore {
+    margin-top: 20px;
+    margin-left : 15px;
+    margin-bottom : 15px;
+
+}
+
+.moregallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    display: inline-block;
+}
+
+.moregallery img {
+    width: 100%;
+    height: auto;
+}
+
+.moredesc {
+    padding: 15px;
+    text-align: center;
+
+}
