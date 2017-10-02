@@ -1,22 +1,14 @@
-.search-box-wrapper{
-    display: inline;
-    text-align: center;
-}
-
-.search-box-input{
-    font-size: inherit;
-    border-radius: 5px;
-    padding: 3px 5px;
-    width: 35%;
-}
-
-.search-box-button{
-    font-size: inherit;
-    border-radius: 5px;
-}
-
 html{
     font-family: 'Roboto', sans-serif;
+}
+#navbar{
+    background-color: white;
+    box-shadow: 0px 6px 15px black;
+    margin: 0;
+}
+h4{
+    font-weight: 400;
+    font-size: 18px;
 }
 
 #homenavbar{
@@ -34,53 +26,94 @@ html{
 
 body{
 	margin: 0;
+	background-repeat : repeat;
+	background-image : url(../img/pattern/broken_noise.png);
 }
 
 body.home{
     background-image: url(../img/layout.jpg);
     background-size: cover;
     font-size: 14px;
-    background-color: #ffffff;
-    background-repeat: no-repeat;
+    background-color: #FEFEFE;
 }
 
-.home {
+ul {
     margin: 0 7px 10px 0;
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: #171719;
 }
 
-.home ul {
-    margin: 0 0px 10px 0;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
+ul h4{
+    font-size: 18px;
 }
 
-.home li {
+ul li {
     float: right;
 }
 
-.home a {
+ul li a {
     display: block;
-    color: rgb(0, 115, 38);
-    background-color: white;
+    color: #717171;
+    background-color: #171719;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: background-color 0.4s ease;
 }
 
-.home li a:hover {
-    background-color: rgba(0, 115, 38, 0.8);
-    color: white;
+ul a:hover {
+    color: #3cd52e;
     text-decoration: none;     
 }
+
+h4{
+    font-size: 18px;
+}
+
+.navbar{
+    background-color: #171719;
+	color : #717171;
+    margin: 0;
+}
+
+.homenavbar{
+	background-color: #171719;
+	color : #717171;
+    margin: 0;
+    box-shadow: 0px 6px 15px black;
+}
+
+.logo{
+	float : left;
+	width : 150px;
+	height : 75px;
+	margin-left : 50px;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+
+.search-box-wrapper{
+    display: inline;
+    text-align: center;
+}
+
+.search-box-input{
+    font-size: inherit;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 35%;
+}
+
+.search-box-button{
+    font-size: inherit;
+    border-radius: 5px;
+}
+
 .active{
-    border-bottom: solid
+    border-bottom: solid;
+	color : #3cd52e;
 }
 .active h4{
     font-weight: 700;
@@ -110,50 +143,14 @@ body.home{
 
 }
 
-.global {
-    margin: 0 7px 10px 0;
-    background-color: rgb(0, 115, 38);
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-}
-
-.global li {
-    float: right;
-}
-
-.global li a {
-    display: block;
-    color: white;
-    background-color: rgb(0, 115, 38);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.4s ease;
-}
-
-.global ul {
-    margin: 0 0px 10px 0;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(0, 115, 38);
-}
-
-.global li a:hover {
-    background-color: white;
-    color: rgba(0, 115, 38, 0.8);
-    text-decoration: none;     
-}
-
-#globalnavbar{
-    background-color: rgb(0, 115, 38);
-    box-shadow: 0px 6px 15px black;
-    margin: 0;
+.h4title{
+	text-align : center;
+	color : #FFFFFF;
+	font-weight: 700;
 }
 
 #mainevent {
-    margin-top: 20px;
+    margin: 20px;
     border-style : none;
     overflow: auto;
     float : left;
@@ -161,6 +158,8 @@ body.home{
     padding-left : 18px;
     padding-bottom: 10px;
     padding-right: 10px;
+	background-color : #f0eff3;
+	color : #171719;
 }
 
 .maingalleryevent {
@@ -181,18 +180,21 @@ body.home{
 }
 
 .headmore {
-    margin-top: 20px;
     margin-left : 15px;
     margin-bottom : 15px;
-
+	color : #FFFFFF;
+	font-weight : 400;
 }
 
 .moregallery {
     margin: 5px;
+	margin-left : 15px;
     border: 1px solid #ccc;
     float: left;
     width: 180px;
     display: inline-block;
+	background-color : #f0eff3;
+	color : #171719;
 }
 
 .moregallery img {
@@ -206,20 +208,38 @@ body.home{
 
 }
 
-.img-circular{
- width: 200px;
- height: 200px;
- background-image: url('http://s2.blomedia.pl/gadzetomania.pl/images/2012/08/ceny-logo-2-304166.jpg');
- background-size: cover;
- display: inline-block;
- background-position: center;
- border-radius: 100px;
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
+.imgcategory{
+	border-radius: 50%;
+	background : #171719;
+	border : 5px solid #FFFFFF;
+	width : 150px;
+	height : 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
-img.rounded{ 
-    border-radius: 50%; 
+.h5category{
+	color : #3cd52e;
+	text-align : center;
+	text-decoration : bold;
+}
+
+img.rounded { border-radius: 50%; }
+
+.contact {
+    margin-left: 20px;
+    overflow: auto;
+    float : left;
+    padding-top : 10px;
+    padding-left : 18px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+	color : #FFFFFF;
+}
+
+.contact h3{
+	color : #FFFFFF;
 }
 
 .socmed img{
