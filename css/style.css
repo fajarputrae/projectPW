@@ -23,7 +23,7 @@ html{
     background-color: white;
     box-shadow: 0px 6px 15px black;
 }
-h4{
+.home h4{
     font-weight: 400;
     font-size: 18px;
 }
@@ -62,7 +62,6 @@ body.home{
 
 .home li {
     float: right;
-    margin
 }
 
 .home a {
