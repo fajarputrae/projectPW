@@ -15,7 +15,7 @@ h4{
     background-color: white;
     box-shadow: 0px 6px 15px black;
 }
-h4{
+.home h4{
     font-weight: 400;
     font-size: 18px;
 }
@@ -254,8 +254,65 @@ img.rounded { border-radius: 50%; }
     transform: scale(1.3, 1.3);
 }
 
+<<<<<<< HEAD
 .textabout {
     padding-left: 15px;
     text-align: justify;
 
 }
+.textabout p {
+    color : #FFFFFF;
+
+}
+
+.about h3{
+    color : #FFFFFF;
+}
+=======
+.dicari{
+    color: white;
+    font-size: 32px;
+}
+
+.result {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.result2 {
+    margin-top: 30px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.result-image img {
+    border-radius: 25%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+.result-stacked {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+.result-content {
+  padding-top: 15px;
+}
+
+.result-content p {
+  margin: 0;
+  color: inherit;
+}
+
+.result-title {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 20pt;
+}
+>>>>>>> 5cd352c77f8b06acad1a8b134f6e2d7483eff4f1
