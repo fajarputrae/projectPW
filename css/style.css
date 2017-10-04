@@ -267,15 +267,13 @@ img.rounded { border-radius: 50%; }
 .about h3{
 	color : black;
 }
-=======
 .dicari{
-    color: white;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .result {
     display: flex;
-    background-color: #fff;
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -284,6 +282,10 @@ img.rounded { border-radius: 50%; }
     display: flex;
     background-color: #fff;
     border-radius: 5px;
+}
+.result-image{
+    float: left;
+    height: 150px;
 }
 .result-image img {
     border-radius: 25%;
