@@ -5,36 +5,32 @@ html{
     background-color: white;
     box-shadow: 0px 6px 15px black;
     margin: 0;
+    z-index: 2;
 }
 h4{
     font-weight: 400;
     font-size: 18px;
-}
-
-#homenavbar{
-    background-color: white;
-    box-shadow: 0px 6px 15px black;
+    z-index: 2;
 }
 .home h4{
     font-weight: 400;
     font-size: 18px;
+    z-index: 2;
 }
-
-.homebody {
-    margin: 0;
+video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: black;
+    filter: brightness(30%);
 }
-
-body{
-	margin: 0;
-	background-repeat : repeat;
-	background-image : url(../img/pattern/broken_noise.png);
-}
-
 body.home{
-    background-image: url(../img/layout.jpg);
-    background-size: cover;
     font-size: 14px;
-    background-color: #FEFEFE;
 }
 
 ul {
@@ -43,6 +39,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #171719;
+    z-index: 2;
 }
 
 ul h4{
@@ -51,6 +48,7 @@ ul h4{
 
 ul li {
     float: right;
+    z-index: 2;
 }
 
 ul li a {
@@ -76,13 +74,9 @@ h4{
     background-color: #171719;
 	color : #717171;
     margin: 0;
-}
-
-.homenavbar{
-	background-color: #171719;
-	color : #717171;
-    margin: 0;
     box-shadow: 0px 6px 15px black;
+    z-index: 2;
+    position: relative;
 }
 
 .logo{
@@ -95,8 +89,10 @@ h4{
 }
 
 .search-box-wrapper{
+    position: relative;
     display: inline;
     text-align: center;
+    z-index: 2;
 }
 
 .search-box-input{
@@ -104,11 +100,14 @@ h4{
     border-radius: 5px;
     padding: 3px 5px;
     width: 35%;
+    z-index: 2;
 }
 
 .search-box-button{
+    position: relative;
     font-size: inherit;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .active{
@@ -235,11 +234,11 @@ img.rounded { border-radius: 50%; }
     padding-left : 18px;
     padding-bottom: 10px;
     padding-right: 10px;
-	color : #FFFFFF;
+	color : black;
 }
 
 .contact h3{
-	color : #FFFFFF;
+	color : black;
 }
 
 .socmed img{
@@ -261,12 +260,12 @@ img.rounded { border-radius: 50%; }
 
 }
 .textabout p {
-    color : #FFFFFF;
-
+	color : black;
+    margin: 0;
 }
 
 .about h3{
-    color : #FFFFFF;
+	color : black;
 }
 =======
 .dicari{
