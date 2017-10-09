@@ -144,7 +144,7 @@ h4{
 
 .h4title{
 	text-align : center;
-	color : #FFFFFF;
+	color : #000;
 	font-weight: 700;
 }
 
@@ -210,13 +210,14 @@ h4{
 .imgcategory{
 	border-radius: 50%;
 	background : #171719;
-	border : 5px solid #FFFFFF;
+	border : 5px solid lightgrey;
 	width : 150px;
 	height : 150px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
+
 
 .h5category{
 	color : #3cd52e;
