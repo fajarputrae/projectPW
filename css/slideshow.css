@@ -1,4 +1,3 @@
-
 .cb-slideshow,
 .cb-slideshow:after { 
     width: 100%;
@@ -8,7 +7,6 @@
     z-index: 0; 
 }
 .cb-slideshow:after { 
-    content: '';
     background: url(../img/pattern/pattern-slideshow.jpg) repeat top left; 
 }
 .cb-slideshow li span { 

@@ -1,12 +1,8 @@
 html{
     font-family: 'Roboto', sans-serif;
+    background-color: #cfcfcf;
 }
-#navbar{
-    background-color: white;
-    box-shadow: 0px 6px 15px black;
-    margin: 0;
-    z-index: 2;
-}
+
 h4{
     font-weight: 400;
     font-size: 18px;
@@ -143,6 +139,7 @@ h4{
 }
 
 .h4title{
+    margin: 50px 0px 40px 0px;
 	text-align : center;
 	color : #000;
 	font-weight: 700;
@@ -181,7 +178,7 @@ h4{
 .headmore {
     margin-left : 15px;
     margin-bottom : 15px;
-	color : #FFFFFF;
+	color : black;
 	font-weight : 400;
 }
 
@@ -209,16 +206,24 @@ h4{
 
 .imgcategory{
 	border-radius: 50%;
-	background : #171719;
+	background-image : url(../img/Futsal1.jpg);
+    background-size: cover;
 	border : 5px solid lightgrey;
 	width : 150px;
 	height : 150px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+    transition: border 0.4s ease;
 }
 
+.imgcategory:hover{
+	border : 5px solid #3cd52e;    
+}
 
+.imgcategory a{
+    display: none;
+}
 .h5category{
 	color : #3cd52e;
 	text-align : center;
@@ -228,11 +233,9 @@ h4{
 img.rounded { border-radius: 50%; }
 
 .contact {
-    margin-left: 20px;
     overflow: auto;
     float : left;
     padding-top : 10px;
-    padding-left : 18px;
     padding-bottom: 10px;
     padding-right: 10px;
 	color : black;
@@ -244,19 +247,17 @@ img.rounded { border-radius: 50%; }
 
 .socmed img{
     margin-top: 10px;
-    margin-right: 10px;
+    margin-left: 10px;
     height: 35px;
     width: 35px;
     transition-duration: 0.3s;
 }
 
 .socmed img:hover{
-    transform: scale(1.3, 1.3);
+    transform: scale(1.1, 1.1);
 }
 
-<<<<<<< HEAD
 .textabout {
-    padding-left: 15px;
     text-align: justify;
 
 }
@@ -317,4 +318,3 @@ img.rounded { border-radius: 50%; }
     font-weight: 700;
     font-size: 20pt;
 }
->>>>>>> 5cd352c77f8b06acad1a8b134f6e2d7483eff4f1
