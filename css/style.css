@@ -318,3 +318,18 @@ img.rounded { border-radius: 50%; }
     font-weight: 700;
     font-size: 20pt;
 }
+
+.detailevent{
+    background-image : url(../img/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -180px;
+}
+
+.juduldetail{
+    margin-left: 15px;
+    padding-top: 500px;
+    color: white;
+    font-weight: 900;
+    font-size: 48px;
+}
