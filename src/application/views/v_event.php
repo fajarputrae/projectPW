@@ -2,6 +2,8 @@
 
 <html>
     <head>
+		<title>Bandung Futsal Arena</title>
+		<link rel="icon" href="<?php echo base_url(); ?>static/img/logo.png" type="image/gif">
         <link href="<?php echo base_url(); ?>static/css/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +13,13 @@
     
     <body>
         <div class="navbar">
-			<img src="<?php echo base_url(); ?>static/img/logo.png" class="logo">	
+			<a href="http://localhost/CI_projek/src/index.php/BFA/home"><img src="<?php echo base_url(); ?>static/img/logo.png" class="logo"></a>	
             <ul>
-				<li><a href="http://localhost/CI_projek/index.php/BFA/contact"><h4>Contact Us</h4></a></li>
-                <li><a href="http://localhost/CI_projek/index.php/BFA/about"><h4>About</h4></a></li>
+				<li><a href="http://localhost/CI_projek/src/index.php/BFA/contact"><h4>Contact Us</h4></a></li>
+                <li><a href="http://localhost/CI_projek/src/index.php/BFA/about"><h4>About</h4></a></li>
                 <li><a class="active" href="#"><h4>Event</h4></a></li>
-                <li><a href="http://localhost/CI_projek/index.php/BFA/category"><h4>Category</h4></a></li>
-				<li><a href="http://localhost/CI_projek/index.php/BFA/home"><h4>Home</h4></a></li>
+                <li><a href="http://localhost/CI_projek/src/index.php/BFA/category"><h4>Category</h4></a></li>
+				<li><a href="http://localhost/CI_projek/src/index.php/BFA/home"><h4>Home</h4></a></li>
             </ul>
         </div>
      	<div class="container">

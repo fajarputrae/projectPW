@@ -69,7 +69,7 @@ h4{
 .navbar{
     background-color: #171719;
 	color : #717171;
-    margin: 0;
+    margin: 0px;
     box-shadow: 0px 6px 15px black;
     z-index: 2;
     position: relative;
@@ -204,26 +204,59 @@ h4{
 
 }
 
+.imgcontainer {
+  position: relative;
+
+}
+
 .imgcategory{
+	display:block;
 	border-radius: 50%;
-	background-image : url(../img/Futsal1.jpg);
-    background-size: cover;
 	border : 5px solid lightgrey;
 	width : 150px;
 	height : 150px;
 	margin-left: auto;
 	margin-right: auto;
-	display: block;
     transition: border 0.4s ease;
 }
 
-.imgcategory:hover{
-	border : 5px solid #3cd52e;    
+.imgcontainer:hover .categoryoverlay {
+	opacity: 0.9;
 }
 
 .imgcategory a{
     display: none;
 }
+
+.categoryoverlay {
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	width: 150px;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #171719;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.categorytext {
+	border-radius: 50%;
+	color: #3cd52e;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	margin : 0 auto;
+	text-align : center;
+}
+
 .h5category{
 	color : #3cd52e;
 	text-align : center;
@@ -281,42 +314,65 @@ img.rounded { border-radius: 50%; }
 
 .result2 {
     margin-top: 30px;
-    display: flex;
+	height:275px;
+	width:600px;
+	min-width:600px;
     background-color: #fff;
     border-radius: 5px;
 }
+
+.result-stacked {
+	height: 300px;
+	width:960px;
+}
+
 .result-image{
     float: left;
+	margin-left: 10px;
+	margin-top: 10px;
     height: 150px;
 }
+
 .result-image img {
     border-radius: 25%;
     width: 150px;
     height: 150px;
-    padding: 20px;
+    padding: 15px;
 }
 
-.result-stacked {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    position: relative;
-}
 .result-content {
-  padding-top: 15px;
-}
-
-.result-content p {
-  margin: 0;
-  color: inherit;
+	margin-top: 10px;
+	float:left;
+	margin-left: 10px;
+	padding : 5px;
+	height:150px;
+	min-height:150px;
+	width:auto;
 }
 
 .result-title {
-    display: block;
-    line-height: 32px;
-    margin-bottom: 8px;
     font-weight: 700;
     font-size: 20pt;
+	color: #4bb748;
+}
+
+.result-content p {
+	margin-top: 5px;
+	color: #717171;
+}
+
+.result-detail {
+	clear: both;
+	width:550px;
+	min-width:550px;
+    margin-top: 8px;
+	margin-left: 10px;
+}
+
+.result-detail p {
+	margin-top: 5px;
+	color: #717171;
+	display: inherit;
 }
 
 .detailevent{
