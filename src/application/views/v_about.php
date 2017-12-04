@@ -13,13 +13,13 @@
     
     <body>
         <div class="navbar">
-            <a href="http://localhost/CI_projek/src/index.php/BFA/home"><img src="<?php echo base_url(); ?>static/img/logo.png" class="logo"></a>
+            <a href="<?php echo base_url(); ?>BFA/home"><img src="<?php echo base_url(); ?>static/img/logo.png" class="logo"></a>
             <ul>
-				<li><a href="http://localhost/CI_projek/src/index.php/BFA/contact"><h4>Contact Us</h4></a></li>
+				<li><a href="<?php echo base_url(); ?>BFA/contact"><h4>Contact Us</h4></a></li>
                 <li><a class="active" href="#"><h4>About</h4></a></li>
-                <li><a href="http://localhost/CI_projek/src/index.php/BFA/event"><h4>Event</h4></a></li>
-                <li><a href="http://localhost/CI_projek/src/index.php/BFA/category"><h4>Category</h4></a></li>
-				<li><a href="http://localhost/CI_projek/src/index.php/BFA/home"><h4>Home</h4></a></li>
+                <li><a href="<?php echo base_url(); ?>BFA/event"><h4>Event</h4></a></li>
+                <li><a href="<?php echo base_url(); ?>BFA/category"><h4>Category</h4></a></li>
+				<li><a href="<?php echo base_url(); ?>BFA/home"><h4>Home</h4></a></li>
             </ul>
         </div>
         
@@ -34,7 +34,8 @@
             <div class="row">
                 <div class="col s12">  
                     <div class="textabout">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed finibus massa. Duis at purus sapien. Aenean neque lectus, faucibus at dolor vitae, congue elementum est.Nam pharetra magna tempus nisi venenatis pharetra.Fusce tincidunt hendrerit massa, at egestas ipsum vestibulum ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Praesent in lectus erat. Aliquam id elit ut diam fermentum hendrerit. Suspendisse placerat quam venenatis convallis dapibus....</p>
+                        <p>Bandung Futsal Arena merupakan website yang diciptakan untuk mempermudah anda para penggila futsal untuk mencari lapang futsal yang berada di Kota Bandung.</p> 
+						<p>Office : Komplek Puri Indah Blok A3/15.</p>
                     </div>
                 </div>
             </div>
