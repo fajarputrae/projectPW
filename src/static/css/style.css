@@ -219,7 +219,6 @@ ul a:hover {
 }
 
 .category_container{
-	border: 2px solid #717171;
 	height: 275px;
 	padding:10px;
 }
@@ -228,7 +227,7 @@ ul a:hover {
 	position: relative;
 	float:right;
 	font-size : 12px;
-	color : #717171;
+	color : #cfcfcf;
 }
 
 .category_container:hover .category_desc{

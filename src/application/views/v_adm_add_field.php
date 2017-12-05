@@ -8,8 +8,8 @@ else {
 ?>
     <head>
 		<title>Admin Panel</title>
-        <link href="<?php echo base_url(); ?>static/css/style-admin.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/materialize.min.css" media="screen,projection"/>
+		<link href="<?php echo base_url(); ?>static/css/style-admin.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/slideshow.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,35 +36,43 @@ else {
                             </ul>
                         </div>
                         <div id='rightContent'>
-                            <form method='post' action=''>
+                            <form method='post' action='<?php echo base_url(); ?>BFA/adm_submit_field'>
                                 <table>
-                                    <tr>
-                                        <td><b>Nama Lapangan</b></td>
-                                        <td><input type='text' maxlength='15' name='namalapang'></td>
+									<tr>
+                                        <td><b>Field ID</b></td>
+                                        <td><input type='text' maxlength='10' name='id' class='sedang' required></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Category</b></td>
+                                        <td><select name='category' class='browser-default'>
+										<?php foreach($response as $data){ ?>
+											<option value="<?php echo $data['category_id'] ?>"><?php echo $data['name'] ?></option>
+										<?php } ?>
+										</select>
+										</td>
                                     </tr>
                                     <tr>
-                                        <td><b>Nomor Telepon</b></td>
-                                        <td><input type='text' maxlength='12' name='tlp'></td>
+                                        <td><b>Field Name</b></td>
+                                        <td><input type='text' maxlength='30' name='name' class='sedang' required></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Alamat</b></td>
-                                        <td><textarea name='alamat'></textarea></td>
+                                        <td><b>Open Hour</b></td>
+                                        <td><input type='number' min='1' max='24' name='open_hour' class='sedang' required></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Close Hour</b></td>
+                                        <td><input type='number' min='1' max='24' name='close_hour' class='sedang' required></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Harga</b></td>
-                                        <td><input type='text' maxlength='15' name='username'></td>
-                                    </tr>
-                                    <tr><td><b>Jam Operasi</b></td>
-                                        <td><input type='password' maxlength='15' name='password'></td>
+                                        <td><b>Address</b></td>
+                                        <td><textarea name='address' maxlength='50' required></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Kategori</b></td>
-                                        <td>
-                                            <select name='kategori'>
-                                                <option>1</option>				<option>2</option>
-                                                <option>3</option>				<option>4</option>
-                                            </select>
-                                        </td>
+                                        <td><b>Price</b></td>
+                                        <td><input type='number' min='10000' maxlength='11' name='price' required></td>
+                                    </tr>
+                                    <tr><td><b>Contact</b></td>
+                                        <td><input type='text' maxlength='13' name='contact' required></td>
                                     </tr>
                                     <tr>
                                         <td></td>

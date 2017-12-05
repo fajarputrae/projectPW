@@ -39,33 +39,18 @@ else {
                             <form method='post' action=''>
                                 <table>
                                     <tr>
-                                        <td><b>Nama Lapangan</b></td>
-                                        <td><input type='text' maxlength='15' name='namalapang'></td>
+                                        <td><b>Name</b></td>
+                                        <td><input type='text' maxlength='15' name='name'></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Nomor Telepon</b></td>
+                                        <td><b>Isi</b></td>
                                         <td><input type='text' maxlength='12' name='tlp'></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Alamat</b></td>
-                                        <td><textarea name='alamat'></textarea></td>
+                                        <td><b>Tanggal</b></td>
+                                        <td><input type="date" name="tanggal"></td>
                                     </tr>
-                                    <tr>
-                                        <td><b>Harga</b></td>
-                                        <td><input type='text' maxlength='15' name='username'></td>
-                                    </tr>
-                                    <tr><td><b>Jam Operasi</b></td>
-                                        <td><input type='password' maxlength='15' name='password'></td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Kategori</b></td>
-                                        <td>
-                                            <select name='kategori'>
-                                                <option>1</option>				<option>2</option>
-                                                <option>3</option>				<option>4</option>
-                                            </select>
-                                        </td>
-                                    </tr>
+                                    
                                     <tr>
                                         <td></td>
                                         <td>

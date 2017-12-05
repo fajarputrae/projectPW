@@ -20,13 +20,24 @@
 		}
 		
 		public function index(){
-			$this->load->view('v_home', $data);
+			$this->load->view('v_home');
 		}
 		
 		public function home(){
-			$this->load->model('m_field');
-			$data['response'] = $this->m_field->get();
-			$this->load->view('v_home', $data);
+			$this->load->view('v_home');
+		}
+		
+		public function field_search(){
+		$this->load->model('m_field_search');
+        // Retrieve the posted search term.
+        $search_term = $this->input->post('search');
+
+        // Use a model to retrieve the results.
+        $data['results'] = $this->m_field_search->get_results($search_term);
+		$data['search_term'] = $this->input->post('search');
+
+        // Pass the results to the view.
+		$this->load->view('v_search_field',$data);
 		}
 		
 		public function list_field(){
@@ -99,6 +110,107 @@
 					$this->load->view('v_login', $data);
 				}
 			}
+		}
+		
+		public function adm_add_field() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_category');
+				$data['response'] = $this->m_category->get();
+				$this->load->view('v_adm_add_field', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
+		}
+		
+		public function adm_submit_field(){
+			$this->load->model('m_field');
+			
+			$id = $this->input->post('id');
+			$category_id = $this->input->post('category');
+			$name = $this->input->post('name');
+			$address = $this->input->post('address');
+			$open_hour = $this->input->post('open_hour');
+			$close_hour = $this->input->post('close_hour');
+			$price = $this->input->post('price');
+			$contact = $this->input->post('contact');
+				
+			if($this->m_field->input($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact)){
+				$data['response']=$this->m_field->get();
+				$this->load->view('v_adm_field',$data);
+			}
+			else{
+				$this->load->view('v_adm_add_field');
+			}
+		}
+		
+		public function edit_field(){
+			$this->load->model('m_field');
+			$this->load->model('m_category');
+			$id = $this->uri->segment(3);
+			$data['response'] = $this->m_field->pilih($id);
+			$data['response_c'] = $this->m_category->get();
+			$this->load->view('v_edit_field', $data);
+		}
+		
+		public function update_field(){
+			$this->load->model('m_field');
+			
+			$id = $this->input->post('id');
+			$category_id = $this->input->post('category');
+			$name = $this->input->post('name');
+			$address = $this->input->post('address');
+			$open_hour = $this->input->post('open_hour');
+			$close_hour = $this->input->post('close_hour');
+			$price = $this->input->post('price');
+			$contact = $this->input->post('contact');
+		
+			if($this->m_field->update($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact)){
+				$data['response']=$this->m_field->get();
+				$this->load->view('v_adm_field', $data);
+			}
+	}
+		
+		public function delete_field(){
+				$this->load->model('m_field');
+				$id = $this->uri->segment(3);
+				if($this->m_field->hapus($id)){
+					$data['response'] = $this->m_field->get();
+					$this->load->view('v_adm_field', $data);
+				}
+		}
+		
+		public function adm_field() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_field');
+				$data['response'] = $this->m_field->get();
+				$this->load->view('v_adm_field', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
+		}
+		
+		public function adm_add_category() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_category');
+				$data['response_c'] = $this->m_category->get();
+				$this->load->view('v_adm_add_category', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
+		}
+		
+		public function adm_category() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_category');
+				$data['response'] = $this->m_category->get();
+				$this->load->view('v_adm_category', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
 		}
 		
 		// Logout
