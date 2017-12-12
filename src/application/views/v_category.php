@@ -20,6 +20,11 @@
                 <li><a href="<?php echo base_url(); ?>BFA/event"><h4>Event</h4></a></li>
                 <li><a class="active" href="#"><h4>Category</h4></a></li>
                 <li><a href="<?php echo base_url(); ?>BFA/home"><h4>Home</h4></a></li>
+				<?php if(!isset($this->session->userdata['logged_in'])){ ?>
+					<li><a href='<?php echo base_url(); ?>BFA/login'><h4>Login</h4></a></li>
+				<?php } else { ?>
+					<li><a href='<?php echo base_url(); ?>BFA/logout'><h4>Logout</h4></a></li>
+				<?php } ?>
             </ul>
         </div>
         <div class="container">
@@ -28,7 +33,7 @@
 			</div>
 			<div class="row">
 				<?php foreach($response as $data){ ?>
-					<div class="col s12 m6 l6" style="margin-top:20px;">
+					<div class="col s12 m12 l6" style="margin-top:20px;">
 						<a href="<?php echo base_url(); ?>BFA/list_field?id=<?php echo $data['category_id'] ?>">
 						<div class="category_container">
 							<div class="imgcontainer">

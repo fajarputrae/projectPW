@@ -33,6 +33,8 @@ else {
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_field">Lihat Lapangan</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_add_category">Tambah Category</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_category">Lihat Category</a></li>
+								<li><a href="<?php echo base_url(); ?>BFA/adm_add_event">Tambah Event</a></li>
+                                <li><a href="<?php echo base_url(); ?>BFA/adm_event">Lihat Event</a></li>
                             </ul>
                         </div>
                         <div id='rightContent'>

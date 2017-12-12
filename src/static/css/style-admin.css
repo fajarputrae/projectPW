@@ -182,4 +182,9 @@ tr.data small a{color: #fff;}
 tr.data small{color: #fff;}
 tr.data:hover small a{color: #527e19;}
 tr.data:hover small a:hover{color: #000;}
-tr.data:hover small {color: #5b5b5b;}		
+tr.data:hover small {color: #5b5b5b;}
+
+.img_preview{
+	width : 600px;
+	height : 800px;
+}		

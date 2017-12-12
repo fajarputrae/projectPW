@@ -10,4 +10,9 @@ class m_category extends CI_Model{
 		return $query->result_array();
 	}
 	
+	public function pilih($id){
+			$this->db->where('category_id', $id);
+			return $this->db->get('category');
+	}
+	
 }

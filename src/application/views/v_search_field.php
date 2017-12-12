@@ -32,6 +32,7 @@
 			<div class="row">
 			<?php foreach($results as $data){ ?>
 				<div class="col s12 m6 l6">
+					<a href='<?php echo base_url().'BFA/field_detail/'.$data['id'];?>'>
 					<div class="result-stacked">
 						<div class="result2">
 							<div class="result-image">
@@ -45,12 +46,13 @@
 								<hr class="hr_result">
 								<div>
 									<p>Lapangan : <?php echo $data['c_name'] ?></p>
-									<p>Harga Normal : <?php echo $data['price'] ?> / jam</p>
+									<p>Harga Normal : <?php echo $data['price_min'] ?> - <?php echo $data['price_max'] ?> / jam</p>
 									<p>Jam operasi : 0<?php echo $data['open_hour'] ?>:00 - <?php echo $data['close_hour'] ?>:00</p>
 								</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				</div>
 			<?php } ?>
 			</div>

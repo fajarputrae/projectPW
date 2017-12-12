@@ -33,6 +33,8 @@ else {
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_field">Lihat Lapangan</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_add_category">Tambah Category</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_category">Lihat Category</a></li>
+								<li><a href="<?php echo base_url(); ?>BFA/adm_add_event">Tambah Event</a></li>
+                                <li><a href="<?php echo base_url(); ?>BFA/adm_event">Lihat Event</a></li>
                             </ul>
                         </div>
                         <div id='rightContent'>
@@ -48,7 +50,7 @@ else {
 									<td><?php echo $data['category_id'] ?></td>
                                     <td><?php echo $data['name'] ?></td>
                                     <td><?php echo $data['category_desc'] ?></td>
-                                    <td><a href=''>Edit</a> <a href=''>Delete</a></td>
+                                    <td><a href="<?php echo base_url().'BFA/edit_category/'.$data['category_id'];?>">Edit</a> <a href=''>Delete</a></td>
                                 </tr>
 								<?php } ?>
                             </table>

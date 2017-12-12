@@ -398,7 +398,6 @@ img.rounded { border-radius: 50%; }
 }
 
 .detailevent{
-    background-image : url(../img/bg3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -180px;
@@ -410,6 +409,7 @@ img.rounded { border-radius: 50%; }
     color: white;
     font-weight: 900;
     font-size: 48px;
+	text-shadow: 2px 2px 4px #000000;
 }
 
 fieldset {
@@ -513,3 +513,237 @@ textarea::-webkit-input-placeholder {
 textarea::-moz-placeholder {
   color: #171719;
 }
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+#arena1 {
+    margin-top: 20px;
+    border: 2px dashed #3cd52e;
+    overflow: auto;
+    float : left;
+    padding: 0px 18px 18px 18px;
+	background-color : #f0eff3;
+	color : #171719;
+    width: 80%;
+}
+
+.foto{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.foto img{
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+    transition: 0.3s;
+}
+
+.foto img:hover{opacity: 0.7;}
+
+.judularena{
+    color: #171719;
+    font-weight: 700;
+    font-size: 36px;
+    margin: 10px 0px 0px 10px;
+    
+}
+
+.detailarena{
+    color: #171719;
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: -20px
+}
+
+.telfarena{
+    float: right;
+    font-weight: 500;
+    font-size: 20px;
+    color : #3cd52e;
+    margin-bottom: -20px
+}
+#arena2 {
+    border: 2px dashed #3cd52e;
+    overflow: auto;
+    float : left;
+    padding: 0px 18px 18px 18px;
+	background-color : #f0eff3;
+	color : #171719;
+    width: 80%;
+}
+
+.judulisiarena{
+    margin: 30px 18px 0px 0px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.isiisi{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* The Modal (background) */
+.myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 70px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.mainevent{
+    margin-top: 20px;
+    background-color: #efefef;
+    padding: 10px 35px 0px 35px;
+}
+
+.mainpic{
+    background-size: contain;
+    background-repeat: repeat;
+    margin-bottom: -8px;
+}
+
+.maindate{
+    width: 100%;
+    background-color: #017327;
+    width: 200px;
+    color: #ffffff;
+    font-size: 14pt;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 15px;
+}
+
+.maindesc{
+    text-align: justify;
+}
+
+.maindesc a{
+    color: #017327;
+}
+.maintitle{
+    padding: 5px 5px 5px 10px;
+    width: 500px;
+    background-color: #efefef;
+    margin-top: 240px;
+    color: #6f6f6f;
+    font-size: 20pt;
+}
+
+.moreevent{
+    color: #474747;
+    font-weight: 700;
+    font-size: 20pt;
+}
+
+.sidepic1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 450px;
+    max-height: 325px;
+	border: 2px dashed #3cd52e;
+}
+
+.sidetitle{
+    padding: 5px 5px 5px 10px;
+    width: 380px;
+    background-color: #efefef;
+    margin: 240px 0px 0px -12px;
+    color: #6f6f6f;
+    font-size: 14pt;
+}
+
+.sidedate{
+    width: 100%;
+    background-color: #017327;
+    width: 120px;
+    color: #ffffff;
+    font-size: 10pt;
+    padding: 5px 5px 5px 10px;
+    margin: 0px 0px 15px -12px;
+}
+
+.posterevent{
+	display: inline-block;
+	height:100%;
+	width:400px;
+	cursor: pointer;
+    transition: 0.3s;
+}
+
+.posterevent:hover{opacity: 0.7;}

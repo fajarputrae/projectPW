@@ -27,6 +27,11 @@
                 <li><a href="<?php echo base_url(); ?>BFA/event"><h4>Event</h4></a></li>
                 <li><a href="<?php echo base_url(); ?>BFA/category"><h4>Category</h4></a></li>
                 <li><a class="active" href="#"><h4>Home</h4></a></li>
+				<?php if(!isset($this->session->userdata['logged_in'])){ ?>
+					<li><a href='<?php echo base_url(); ?>BFA/login'><h4>Login</h4></a></li>
+				<?php } else { ?>
+					<li><a href='<?php echo base_url(); ?>BFA/logout'><h4>Logout</h4></a></li>
+				<?php } ?>
             </ul>
         </div>
         <div class="container">

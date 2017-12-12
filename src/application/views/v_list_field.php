@@ -20,6 +20,11 @@
                 <li><a href="<?php echo base_url(); ?>BFA/event"><h4>Event</h4></a></li>
                 <li><a href="<?php echo base_url(); ?>BFA/category"><h4>Category</h4></a></li>
                 <li><a class="active" href="<?php echo base_url(); ?>BFA/home"><h4>Home</h4></a></li>
+				<?php if(!isset($this->session->userdata['logged_in'])){ ?>
+					<li><a href='<?php echo base_url(); ?>BFA/login'><h4>Login</h4></a></li>
+				<?php } else { ?>
+					<li><a href='<?php echo base_url(); ?>BFA/logout'><h4>Logout</h4></a></li>
+				<?php } ?>
             </ul>
         </div>
         
@@ -33,6 +38,7 @@
 			<div class="row">
 			<?php foreach($response as $data){ ?>
 				<div class="col s12 m6 l6">
+					<a href='<?php echo base_url().'BFA/field_detail/'.$data['id'];?>'>
 					<div class="result-stacked">
 						<div class="result2">
 							<div class="result-image">
@@ -46,12 +52,13 @@
 								<hr class="hr_result">
 								<div>
 									<p>Lapangan : <?php echo $data['c_name'] ?></p>
-									<p>Harga Normal : <?php echo $data['price'] ?> / jam</p>
+									<p>Harga Normal : <?php echo $data['price_min'] ?> - <?php echo $data['price_max'] ?> / jam</p>
 									<p>Jam operasi : 0<?php echo $data['open_hour'] ?>:00 - <?php echo $data['close_hour'] ?>:00</p>
 								</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				</div>
 			<?php } ?>
 			</div>

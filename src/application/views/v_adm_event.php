@@ -8,7 +8,6 @@ else {
 ?>
     <head>
 		<title>Admin Panel</title>
-		<link rel="icon" href="<?php echo base_url(); ?>static/img/logo.png" type="image/gif">
         <link href="<?php echo base_url(); ?>static/css/style-admin.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/materialize.min.css" media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/slideshow.css">
@@ -41,25 +40,21 @@ else {
                         <div id='rightContent'>
                             <table width='95%' class='data'>   
                                 <tr style='text-align:center;'>
-                                    <td class='data'>ID</td>
-									<td class='data'>Category ID</td>
-									<td class='data'>Name</td>
-                                    <td class='data'>Address</td>
-									<td class='data'>Operational Hour</td>
-                                    <td class='data'>Price</td>
-                                    <td class='data'>Contact</td>
-                                    <td class='data'>Action</td>
+                                    <td class='data'>Event ID</td>
+                                    <td class='data'>Event Name</td>
+									<td class='data'>Event Date</td>
+									<td class='data'>Price</td>
+									<td class='data'>Contact</td>
+									<td class='data'>Action</td>
                                 </tr>
-								<?php foreach($response as $data){ ?>
+								<?php foreach($response->result() as $data){ ?>
                                 <tr class='data'>
-									<td><?php echo $data['id'] ?></td>
-                                    <td><?php echo $data['category_id'] ?></td>
-									<td><?php echo $data['name'] ?></td>
-                                    <td><?php echo $data['address'] ?></td>
-                                    <td><?php echo $data['open_hour'] . ' - ' . $data['close_hour'] ?></td>
-                                    <td><?php echo $data['price_min'] . ' - ' . $data['price_max']  ?></td>
-                                    <td><?php echo $data['contact'] ?></td>
-                                    <td><a href='<?php echo base_url().'BFA/edit_field/'.$data['id'];?>'>Edit</a> <a href='<?php echo base_url().'BFA/delete_field/'.$data['id'];?>'>Delete</a></td>
+									<td><?php echo $data->id ?></td>
+                                    <td><?php echo $data->name ?></td>
+									<td><?php echo $data->date ?></td>
+									<td><?php echo $data->price ?></td>
+									<td><?php echo $data->contact ?></td>
+                                    <td><a href="<?php echo base_url().'BFA/edit_event/'.$data->id;?>">Edit</a> <a href="<?php echo base_url().'BFA/delete_event/'.$data->id;?>">Delete</a></td>
                                 </tr>
 								<?php } ?>
                             </table>

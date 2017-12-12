@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2017 at 01:38 PM
+-- Generation Time: Dec 11, 2017 at 03:06 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -80,7 +80,8 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`id`, `name`, `email`, `subject`, `message`) VALUES
 (1, 'Eko Fajar Putra', 'ekofajarp27@gmail.com', 'Test 1', 'This is my first attempt of mailing to BFA admin'),
-(2, 'Eko Fajar Putra', 'ekofajarp27@gmail.com', 'Test 1', 'This is my first attempt of mailing to BFA admin');
+(2, 'Eko Fajar Putra', 'ekofajarp27@gmail.com', 'Test 1', 'This is my first attempt of mailing to BFA admin'),
+(3, 'Eko Fajar Putra', 'ekofajarp27@gmail.com', 'lol', '				wwkkwkw\r\nbabi\r\nanjing \r\nitu\r\nharam');
 
 -- --------------------------------------------------------
 
@@ -92,10 +93,13 @@ CREATE TABLE `field` (
   `id` varchar(10) NOT NULL,
   `category_id` varchar(4) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `address` varchar(50) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `lat` double NOT NULL,
+  `lng` double NOT NULL,
   `open_hour` varchar(4) NOT NULL,
   `close_hour` varchar(4) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price_min` int(11) NOT NULL,
+  `price_max` int(11) NOT NULL,
   `contact` varchar(13) NOT NULL,
   `img` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -104,15 +108,14 @@ CREATE TABLE `field` (
 -- Dumping data for table `field`
 --
 
-INSERT INTO `field` (`id`, `category_id`, `name`, `address`, `open_hour`, `close_hour`, `price`, `contact`, `img`) VALUES
-('F001', 'C001', 'Anta Futsal', 'Jl. Ters. Jkt No.1, Babakan Surabaya, Kiaracondong', '7', '24', 85000, '0227206340', 'anta.jpg'),
-('F002', 'C004', 'OBC Futsal', 'Jl. Rancabentang I No.3A, Ciumbuleuit, Cidadap', '7', '24', 150000, '0222030915', 'obc.jpg'),
-('F003', 'C002', 'Maleo Futsal', 'Jl. Dangdeur Indah 2 No. 15', '7', '24', 135000, '0222008517', 'maleo.jpg'),
-('F004', 'C003', 'Queen Futsal', 'Jl. Brigjen Katamso No.66, Cicadas', '7', '24', 200000, '085100492116', 'queen.jpg'),
-('F005', 'C002', 'Shakti Taridi Futsal', 'Jl. Parakan Saat No. 9 RT 2/11, Arcamanik', '8', '24', 150000, '087722663306', 'shaktitaridi.jpg'),
-('F006', 'C003', 'YPKP Futsal', ' Jl. Penghulu H. Hasan Mustopa No.70, Neglasari', '1', '24', 100000, '081321869910', 'ypkp.jpg'),
-('F007', 'C004', 'Ballroom Futsal', 'Malabar, Lengkong, Kota Bandung', '6', '24', 110000, '081910088345', 'ballroom.jpg'),
-('F008', 'C001', 'Futsal 35', 'Jl. International School No. 8 A, Cicaheum', '7', '22', 85000, '02270015535', 'futsal35.jpg');
+INSERT INTO `field` (`id`, `category_id`, `name`, `address`, `lat`, `lng`, `open_hour`, `close_hour`, `price_min`, `price_max`, `contact`, `img`) VALUES
+('F001', 'C001', 'Anta Futsal', 'Jl. Ters. Jkt No.1, Babakan Surabaya, Kiaracondong', -6.913192, 107.644331, '7', '24', 85000, 85000, '0227206340', 'anta.jpg'),
+('F002', 'C004', 'OBC Futsal', 'Jl. Rancabentang I No.3A, Ciumbuleuit, Cidadap', -6.874859, 107.607538, '7', '24', 85000, 15000, '0222030915', 'obc.jpg'),
+('F003', 'C002', 'Maleo Futsal', 'Jl. Dangdeur Indah 2 No. 15', -6.883296, 107.583188, '7', '24', 75000, 135000, '0222008517', 'maleo.jpg'),
+('F004', 'C003', 'Queen Futsal', 'Jl.Brigjen Katamso No.66, Cicadas, Cibeunying Kidul', -6.902958, 107.633529, '7', '24', 130000, 200000, '085100492116', 'queen.jpg'),
+('F005', 'C002', 'Shakti Taridi Futsal', 'Jl. Parakan Saat No. 9 RT 2/11 Arcamanik', -6.93104, 107.66914, '8', '24', 100000, 150000, '087722663306', 'shaktitaridi.jpg'),
+('F006', 'C003', 'YPKP Futsal', 'Jl. Penghulu H. Hasan Mustopa No.70, Neglasari', -6.899541, 107.639956, '1', '24', 80000, 100000, '081321869910', 'ypkp.jpg'),
+('F007', 'C004', 'Ballroom Futsal', 'Malabar, Lengkong', -6.920346, 107.621778, '6', '24', 70000, 110000, '081910088345', 'ballroom.jpg');
 
 -- --------------------------------------------------------
 
@@ -168,7 +171,7 @@ ALTER TABLE `field`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

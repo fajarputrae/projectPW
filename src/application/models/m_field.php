@@ -10,7 +10,7 @@ class m_field extends CI_Model{
 		return $query->result_array();
 	}
 	
-	public function input($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact)
+	public function input($id, $category_id, $name, $address, $open_hour, $close_hour, $price_min, $price_max, $contact)
 		{
 			$data = array(
 				'id' => $id,
@@ -19,7 +19,8 @@ class m_field extends CI_Model{
 				'address' => $address,
 				'open_hour' => $open_hour,
 				'close_hour' => $close_hour,
-				'price' => $price,
+				'price_min' => $price_min,
+				'price_max' => $price_max,
 				'contact' => $contact
 			);
 
@@ -33,21 +34,21 @@ class m_field extends CI_Model{
 			return $this->db->get('field');
 	}
 	
-	public function update($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact){
+	public function update($id, $category_id, $name, $address, $open_hour, $close_hour, $price_min, $price_max, $contact){
 		$data = array(
 			'category_id' => $category_id,
 			'name' => $name,
 			'address' => $address,
 			'open_hour' => $open_hour,
 			'close_hour' => $close_hour,
-			'price' => $price,
+			'price_min' => $price_min,
+			'price_max' => $price_max,
 			'contact' => $contact
 		);
 		$this->db->where('id', $id);
 		$this->db->update('field', $data);
-		if($this->db->update('field', array('category_id' => $category_id, 'name' => $name, 'address' => $address, 'open_hour' => $open_hour, 'close_hour' => $close_hour, 'price' => $price, 'contact' => $contact))){
-		  return TRUE;
-		}
+		
+		return TRUE;
 	}
 	
 	public function hapus($id){
@@ -55,5 +56,5 @@ class m_field extends CI_Model{
 		  if($this->db->delete('field')){
 			  redirect('BFA/adm_field', 'refresh');
 		  }
-	  }
+	}
 }

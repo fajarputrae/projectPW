@@ -28,16 +28,22 @@
 		}
 		
 		public function field_search(){
-		$this->load->model('m_field_search');
-        // Retrieve the posted search term.
-        $search_term = $this->input->post('search');
-
-        // Use a model to retrieve the results.
-        $data['results'] = $this->m_field_search->get_results($search_term);
-		$data['search_term'] = $this->input->post('search');
-
-        // Pass the results to the view.
-		$this->load->view('v_search_field',$data);
+			$this->load->model('m_field_search');
+			// Retrieve the posted search term.
+			$search_term = $this->input->post('search');
+			
+			if(isset($search_term)){
+				// Use a model to retrieve the results.
+				$data['results'] = $this->m_field_search->get_results($search_term);
+				$data['search_term'] = $this->input->post('search');
+				
+				// Pass the results to the view.
+				$this->load->view('v_search_field',$data);
+			}
+			
+			else{
+				$this->load->view('v_home');
+			}
 		}
 		
 		public function list_field(){
@@ -48,14 +54,32 @@
 			$this->load->view('v_list_field', $data);
 		}
 		
+		public function field_detail(){
+			//$id = $this->input->get('id');
+			$id = $this->uri->segment(3);
+			
+			$this->load->model('m_field');
+			$data['response'] = $this->m_field->pilih($id);
+			$this->load->view('v_field_detail', $data);
+		}
+		
 		public function about(){
 			$this->load->view('v_about');
 		}
 		
 		public function event(){
-			$this->load->model('m_field');
-			$data['response'] = $this->m_field->get();
+			$this->load->model('m_event');
+			$data['response_primary'] = $this->m_event->get_primary();
+			$data['response'] = $this->m_event->get();
 			$this->load->view('v_event', $data);
+		}
+		
+		public function event_detail(){
+			$id = $this->uri->segment(3);
+			
+			$this->load->model('m_event');
+			$data['response'] = $this->m_event->pilih($id);
+			$this->load->view('v_event_detail', $data);
 		}
 		
 		public function category(){
@@ -102,7 +126,7 @@
 						);
 						// Add user data in session
 						$this->session->set_userdata('logged_in', $session_data);
-						$this->load->view('v_admin');
+						$this->adm_add_field();
 					}
 				} 
 				else {
@@ -162,10 +186,11 @@
 			$address = $this->input->post('address');
 			$open_hour = $this->input->post('open_hour');
 			$close_hour = $this->input->post('close_hour');
-			$price = $this->input->post('price');
+			$price_min = $this->input->post('price_min');
+			$price_max = $this->input->post('price_max');
 			$contact = $this->input->post('contact');
 		
-			if($this->m_field->update($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact)){
+			if($this->m_field->update($id, $category_id, $name, $address, $open_hour, $close_hour, $price_min, $price_max, $contact)){
 				$data['response']=$this->m_field->get();
 				$this->load->view('v_adm_field', $data);
 			}
@@ -189,6 +214,65 @@
 			else{
 				$this->load->view('v_login');
 			} 
+		}
+		
+		public function adm_add_event() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_event');
+				$data['response'] = $this->m_event->get();
+				$this->load->view('v_adm_add_event', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
+		}
+		
+		public function adm_submit_event(){
+			$this->load->model('m_event');
+			
+			$id = $this->input->post('id');
+			$name = $this->input->post('name');
+			$date = $this->input->post('date');
+			$price = $this->input->post('price');
+			$desc = $this->input->post('desc');
+			$contact = $this->input->post('contact');
+			$img = $_FILES["img"]["name"];
+			$status = $this->input->post('status');
+				
+			if($this->m_event->input($id, $name, $date, $price, $desc, $contact, $img, $status)){
+				$data['response']=$this->m_event->get();
+				$this->load->view('v_adm_event',$data);
+			}
+			else{
+				$this->load->view('v_adm_add_event');
+			}
+		}
+		
+		public function delete_event(){
+				$this->load->model('m_event');
+				$id = $this->uri->segment(3);
+				if($this->m_event->hapus($id)){
+					$data['response'] = $this->m_event->get();
+					$this->load->view('v_adm_event', $data);
+				}
+		}
+		
+		public function adm_event() {
+			if(isset($this->session->userdata['logged_in'])){
+				$this->load->model('m_event');
+				$data['response'] = $this->m_event->ambil();
+				$this->load->view('v_adm_event', $data);
+			}
+			else{
+				$this->load->view('v_login');
+			} 
+		}
+		
+		public function edit_category(){
+			$this->load->model('m_category');
+			$id = $this->uri->segment(3);
+			$data['response'] = $this->m_category->pilih($id);
+			$this->load->view('v_edit_category', $data);
 		}
 		
 		public function adm_add_category() {

@@ -5,9 +5,6 @@
 		<title>Bandung Futsal Arena</title>
 		<link rel="icon" href="<?php echo base_url(); ?>static/img/logo.png" type="image/gif">
 		<!--Grid from Materialize-->
-		<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/remodal.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/remodal-default-theme.css">
-		<!--Modal from remodal-->
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/materialize.min.css" media="screen,projection"/>
         <link href="<?php echo base_url(); ?>static/css/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
@@ -23,6 +20,11 @@
                 <li><a href="<?php echo base_url(); ?>BFA/event"><h4>Event</h4></a></li>
                 <li><a href="<?php echo base_url(); ?>BFA/category"><h4>Category</h4></a></li>
 				<li><a href="<?php echo base_url(); ?>BFA/home"><h4>Home</h4></a></li>
+				<?php if(!isset($this->session->userdata['logged_in'])){ ?>
+					<li><a href='<?php echo base_url(); ?>BFA/login'><h4>Login</h4></a></li>
+				<?php } else { ?>
+					<li><a href='<?php echo base_url(); ?>BFA/logout'><h4>Logout</h4></a></li>
+				<?php } ?>
             </ul>
         </div>
 		<div class="remodal-bg">
@@ -43,8 +45,8 @@
 				<fieldset>
 				<legend>Feedback Form:</legend>
 				<label for="name" class="contact_label">*Name :</label><input type="text" name="name" class="contact_input" required><br>
-				<label for="email" class="contact_label">Email :</label><input type="email" name="email" class="contact_input" required><br>
-				<label for="subject" class="contact_label">Subject :</label><input type="text" name="subject" class="contact_input" required><br>
+				<label for="email" class="contact_label">*Email :</label><input type="email" name="email" class="contact_input" required><br>
+				<label for="subject" class="contact_label">*Subject :</label><input type="text" name="subject" class="contact_input" required><br>
 				<label for="message" class="contact_label">Message :</label><br><br>
 				<textarea  placeholder="Remember, be nice!" class="textcontact" name="message" rows="6" style="overflow: hidden; word-wrap: break-word;
 				resize: none; height: 320px;" required>
@@ -54,15 +56,6 @@
 				</fieldset>
 			</form>
         </div>
-		<div class="remodal"  data-remodal-id="remodal">
-			<button data-remodal-action="close" class="remodal-close"></button>
-			<h1>Success</h1>
-			<p>
-				Your feedback message has successfully sent. Thank you for your support :)
-			</p>
-			<br>
-			<button data-remodal-action="confirm" class="remodal-confirm">OK</button>
-		</div>
         </div>
 		</div>
         <script type="text/javascript"> 

@@ -40,19 +40,31 @@ else {
                             </ul>
                         </div>
                         <div id='rightContent'>
-                            <form method='post' action='<?php echo base_url(); ?>BFA/adm_submit_field'>
+                            <form method='post' action='<?php echo base_url(); ?>BFA/adm_submit_event' enctype="multipart/form-data">
                                 <table>
 									<tr>
-                                        <td><b>Category ID</b></td>
+                                        <td><b>Event ID</b></td>
                                         <td><input type='text' maxlength='10' name='id' class='sedang' required></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Category Name</b></td>
+                                        <td><b>Name</b></td>
                                         <td><input type='text' maxlength='30' name='name' class='sedang' required></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Description</b></td>
-                                        <td><input type='text' maxlength='400' name='category_desc' class='sedang' required></td>
+                                        <td><b>Date</b></td>
+                                        <td><input type='date' name='date' class='sedang' required></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Price</b></td>
+                                        <td><input type='number' min='10000' maxlength='11' name='price' required></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Event Description</b></td>
+                                        <td><textarea name='desc' maxlength='1500' required></textarea></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Contact</b></td>
+                                        <td><input type='text' maxlength='13' name='contact' class='sedang' required></td>
                                     </tr>
 									<tr><td><b>Image</b></td>
 										<td><img class="img_preview" id="blah"></td>
@@ -61,6 +73,14 @@ else {
 										<td></td>
 										<td><input type='file' maxlength='13' name='img' id='imgInp' required onchange="readURL(this);" accept="image/*"></td>
 									</tr>
+									<tr>
+                                        <td><b>Highlight</b></td>
+                                        <td><select name='status' class='browser-default'>
+											<option value="1">YES</option>
+											<option value="0">NO</option>
+										</select>
+										</td>
+                                    </tr>
                                     <tr>
                                         <td></td>
                                         <td>

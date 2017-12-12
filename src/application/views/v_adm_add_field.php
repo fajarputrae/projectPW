@@ -8,6 +8,7 @@ else {
 ?>
     <head>
 		<title>Admin Panel</title>
+		<link rel="icon" href="<?php echo base_url(); ?>static/img/logo.png" type="image/gif">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/materialize.min.css" media="screen,projection"/>
 		<link href="<?php echo base_url(); ?>static/css/style-admin.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>static/css/slideshow.css">
@@ -33,6 +34,8 @@ else {
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_field">Lihat Lapangan</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_add_category">Tambah Category</a></li>
                                 <li><a href="<?php echo base_url(); ?>BFA/adm_category">Lihat Category</a></li>
+								<li><a href="<?php echo base_url(); ?>BFA/adm_add_event">Tambah Event</a></li>
+                                <li><a href="<?php echo base_url(); ?>BFA/adm_event">Lihat Event</a></li>
                             </ul>
                         </div>
                         <div id='rightContent'>
@@ -68,8 +71,12 @@ else {
                                         <td><textarea name='address' maxlength='50' required></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td><b>Price</b></td>
-                                        <td><input type='number' min='10000' maxlength='11' name='price' required></td>
+                                        <td><b>Price Min</b></td>
+                                        <td><input type='number' min='10000' maxlength='11' name='price_min' required></td>
+                                    </tr>
+									<tr>
+                                        <td><b>Price Max</b></td>
+                                        <td><input type='number' min='10000' maxlength='11' name='price_max' required></td>
                                     </tr>
                                     <tr><td><b>Contact</b></td>
                                         <td><input type='text' maxlength='13' name='contact' required></td>
